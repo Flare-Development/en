@@ -1,4 +1,8 @@
 
+
+  <script src="https://vjs.zencdn.net/7.6.6/video.js"></script>
+</body>
+
 <!DOCTYPE html>
 <html>
   <link rel="icon"
@@ -12,7 +16,13 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
 </style>
+<style> 
+#videoplayer {
+width: 100%;
+  height: auto;
+  }</style>
 <body class="w3-light-grey w3-content" style="max-width:1600px">
 
 <!-- Sidebar/menu -->
@@ -51,8 +61,105 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 
     </div>
   </header>
-<div itemscope itemtype="https://schema.org/AudioObject"><meta itemprop="uploadDate" content="Tue Jan 28 2020 15:56:23 GMT-0500 (Eastern Standard Time)"/><meta itemprop="name" content="Death Chase"/><meta itemprop="duration" content="PT1M10.357S" /><meta itemprop="contentUrl" content="https://content.jwplatform.com/videos/J6zeZDfn-MIs7BbbM.m4a"/><div style="position:relative; overflow:hidden; padding-bottom:56.25%"> <iframe src="https://cdn.jwplayer.com/players/J6zeZDfn-ytxN71Gi.html" width="100%" height="100%" frameborder="0" scrolling="auto" title="Death Chase" style="position:absolute;" allowfullscreen></iframe> </div></div>
-  <!-- First Photo Grid-->
+<head>
+  <link href="https://vjs.zencdn.net/7.6.6/video-js.css" rel="stylesheet" />
+
+  <!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
+  <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+</head>
+<style>
+    .responsive {
+  width: 100%;
+  height: auto;
+}
+</style>
+
+<style>
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+ }
+</style>
+</head>
+<body>
+
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+<iframe  src="https://flare-development.github.io/en/watch-id=234809230.html" frameborder="0" height="450" width="650" align="middle" margin="auto"></iframe>
+  </div>
+</div>
+
+
+
+<img class="center" src="https://toppng.com/uploads/preview/lay-png-free-download-play-button-icon-11563024010invs8nth7t.png" width="100" onclick="openNav()" alt="Play Video">Click the button to play the video</img>
+<script>
+function openNav() {
+  document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+</script>
+     
+
+
+
   
   <div class="w3-row-padding">
     <div class="w3-third w3-container w3-margin-bottom">
