@@ -1,13 +1,28 @@
 
 <head>
-<link rel="stylesheet" href="https://raw.githubusercontent.com/HubSpot/odometer/master/themes/odometer-theme-default.css" />
-<script src="https://raw.githubusercontent.com/HubSpot/odometer/v0.4.6/odometer.min.js"></script>
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"> </script>
-</head>
-
-<body>
-  <center>
-    <div id="odometer" class="odometer">0</div>
+    <link rel="stylesheet" href="https://raw.githubusercontent.com/HubSpot/odometer/master/themes/odometer-theme-default.css" />
+    <script src="https://raw.githubusercontent.com/HubSpot/odometer/v0.4.6/odometer.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"> </script>
+    </head>
+    <script type="text/javascript">
+      $ (document).ready ( function() {
+        
+        var channelName= "";
+        function loadChannel (name) {
+          var url = 'https://www.googleapis.com/youtube/v3/channels?part=statistics&id='+name+'&fields=items/statistics/subscriberCount&key=AIzaSyDYR0AP5ebz5VT8uh3r6gOVABddihpckbw'
+        $.getJSON(url, function(data){
+            $('#odometer').html(data.item[0].statistics.subscriberCount);
+        });
+                 
+          }
+        
+      });
+      
+    </script>
+    <body>
+      <center>
+        <div id="odometer" class="odometer">0</div>
+        
+              </center>
+      </body>
     
-          </center>
-  </body>
