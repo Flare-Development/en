@@ -8,6 +8,7 @@
       $ (document).ready ( function() {
         
         var channelName= "";
+        loadChannel("UCV9_KinVpV-snHe3C3n1hvA");
         function loadChannel (name) {
           var url = 'https://www.googleapis.com/youtube/v3/channels?part=statistics&id='+name+'&fields=items/statistics/subscriberCount&key=AIzaSyDYR0AP5ebz5VT8uh3r6gOVABddihpckbw'
         $.getJSON(url, function(data){
