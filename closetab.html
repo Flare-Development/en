@@ -1,13 +1,22 @@
+<style>
+.pager button {
+ width: 100px;
+ height: 100px;
+ border-radius: 9px 9px 9px 9px;
+ background-color: red;
+ font-size: 25px;
+ color: white;
+}
+</style>
 
-
-<body onload="myFunction()">
-
-<h1>Close</h1>
+<body onload="myFunction()"></body>
+<div class="pager">
+<button onclick="myFunction()">Click to close</button>
+</div>
 
 <script>
 function myFunction() {
-  close();
-  return false;
+  window.open('','_self').close();
   
 }
 </script>
