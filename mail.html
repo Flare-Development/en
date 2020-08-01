@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Index</title>
+  <meta charset="utf-8">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Mail Index</h2>
+  <p>A list of currently public emails ending in @quantumapp.net</p>  
+  <input class="form-control" id="myInput" type="text" placeholder="Search..">
+  <br>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>Username</th>
+        <th>Activity</th>
+        <th>Type</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody id="myTable">
+      <tr>
+        <td>Support/Info</td>
+        <td>Active</td>
+        <td>Bot ↔ Human</td>
+        <td>support</td>
+      </tr>
+      <tr>
+        <td>Nick</td>
+        <td>Active</td>
+        <td>Human only</td>
+        <td>nick</td>
+      </tr>
+      <tr>
+        <td>Kim</td>
+        <td>Active</td>
+        <td>Human only</td>
+        <td>kim</td>
+      </tr>
+      <tr>
+        <td>Devon</td>
+        <td>N/A</td>
+        <td>Not collected</td>
+        <td>devon</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <p>This index is updated manually, for automatic updates CHECK API</p>
+</div>
+
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+
+</body>
+</html>
